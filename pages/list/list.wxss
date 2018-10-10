@@ -1,0 +1,78 @@
+/**index.wxss**/
+page {
+  background-color: #aaa;
+}
+.addnote {
+  font-size: 30rpx;
+  background-color: #fff;
+}
+.addgroup {
+  font-size: 30rpx;
+  position:relative;
+  left: 20rpx;
+  background-color: #fff;
+}
+.buttoncontent {
+  display: flex;
+  flex-direction: row;
+  position:absolute;
+  left:0rpx;
+  top:5rpx;
+  height: 75rpx;
+}
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+ position:absolute;
+ top: 100rpx;
+}
+.content{
+  display: flex;
+  height: 1000rpx;
+  width: 100%;
+  position: absolute;
+  top: 120rpx;
+  flex-direction: column;
+  column-gap: 10px;
+}
+.date {
+  width: 30%;
+  height: 50rpx;
+  background: #fff;
+  position:relative;
+  left: 2%;
+  box-shadow: 1px 1px 1px 1px black;
+}
+.value {
+  position:relative;
+  width: 64%;
+  left: 4%;
+  height: 50rpx;
+  background: #fff;
+  box-shadow: 1px 1px 1px 1px black;
+  font-size: 14px;
+}
+.group{
+  position:relative;
+
+}
+
+.divLine1{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+ position:relative;
+}
+
+.note{
+  width: 100%;
+}
+
+.notedetail{
+  width: 100%;
+  display: flex;
+  top: 2rpx;
+  position: relative;
+  height: 75rpx;
+}
