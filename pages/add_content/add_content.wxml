@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='content_title'>
+    <input name="title" placeholder="请输入标题" />
+  </view>
+  <view class='content_type'>
+    <input name="type" placeholder="请输入类型" />
+  </view>
+  <view class='content'>
+    <textarea  placeholder='请输入内容' class='content_textarea'></textarea>
+  </view>
+  </view>

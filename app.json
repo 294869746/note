@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/list/list",
+    "pages/add_content/add_content",
     "pages/logs/logs"
   ],
   "window":{

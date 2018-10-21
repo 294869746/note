@@ -1,0 +1,41 @@
+page {
+  background-color: #aaa;
+  height: 100%;
+}
+
+.container {
+  background: red;
+  height: 100%;
+  width: 100%;
+}
+
+.content_title {
+  background: #FFF;
+  height: 5%;
+  width: 98%;
+  position: absolute;
+  top: 1%;
+}
+
+.content_type {
+    background: #FFF;
+  height: 5%;
+  width: 98%;
+  position: absolute;
+  top: 7%;
+}
+
+.content {
+  background: #FFF;
+  height: 87%;
+  width: 98%;
+  position: absolute;
+  top: 13%;
+}
+
+.content_textarea {
+  background: #FFF;
+  height: 87%;
+  width: 98%;
+  position: absolute;
+}
