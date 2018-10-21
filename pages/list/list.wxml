@@ -11,15 +11,15 @@
       <view class="divLine1" />
       <view class="notedetail">
         <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
+        <view class="value">java入门1</view>
       </view>
       <view class="notedetail">
         <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
+        <view class="value">java入门2</view>
       </view>
       <view class="notedetail">
         <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
+        <view class="value">java入门3</view>
       </view>
     </view>
 <view class="note">
