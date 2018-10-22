@@ -17,15 +17,8 @@ page {
   column-gap: 10px;
 }
 
-.text_type{
-  height: 5%;
-  width: 40%;
-  position: absolute;
-  top: 7%;
-  white-space: pre;
-  color: white;
-}
-.type {
+.content_type {
+    background: #FFF;
   height: 5%;
   width: 98%;
   position: absolute;
@@ -33,19 +26,9 @@ page {
   column-gap: 10px;
 }
 
-.content_type {
-  background: #FFF;
-  height: 5%;
-  width: 84%;
-  position: absolute;
-  top: 7%;
-  column-gap: 10px;
-  left: 16%;
-}
-
 .content {
   background: #FFF;
-  height: 76%;
+  height: 77%;
   width: 98%;
   position: absolute;
   top: 13%;
@@ -64,14 +47,16 @@ page {
   width: 98%;
   display: flex;
   flex-direction: row;
-  top: 90%;
+  top: 91%;
 }
 .save_btn {
   width: 50%;
   height: 5%;
+  top: 91%; 
 }
 
 .cancle_btn {
   width: 50%;
   height: 5%;
+  top: 91%; 
 }
