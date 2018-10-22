@@ -1,8 +1,9 @@
 <!--index.wxml-->
 <view class="container">
   <view class="buttoncontent">
-    <button class="addnote" bindtap="onclick">添加新笔记</button>
-    <button class="addgroup">添加新组</button>
+    <button class="addnote" bindtap="add_note">添加新笔记</button>
+    <button class="addgroup" bindtap="add_type">添加新组</button>
+    <button class="log" bindtap='log'>查看日志</button>
   </view>
   <view class="divLine"></view>
   <view class="content">

@@ -1,16 +1,16 @@
 <view class='container'>
   <view class='content_title'>
-    <input name="title" placeholder="请输入标题" />
+    <input name="title" placeholder="请输入标题" bindinput ='note_title'/>
   </view>
   <view class='type'>
   <text name="类型" class="text_type">类  型:</text>
-    <input name="type" class="content_type" placeholder="请选择类型" />
+    <input name="type" class="content_type" placeholder="请选择类型" bindinput ='note_type'/>
   </view>
   <view class='content'>
-    <textarea  placeholder='请输入内容' class='content_textarea'></textarea>
+    <textarea  placeholder='请输入内容' class='content_textarea' bindinput ='note_content'></textarea>
   </view>
   <view class="operate">
-  <view class='save_btn'><button>保存</button></view>
-  <view class='cancle_btn'><button>取消</button></view>
+  <view class='save_btn'><button bindtap='note_save'>保存</button></view>
+  <view class='cancle_btn'><button bindtap='note_cancle'>取消</button></view>
   </view>
   </view>

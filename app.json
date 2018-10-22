@@ -2,6 +2,7 @@
   "pages":[
     "pages/list/list",
     "pages/add_content/add_content",
+    "pages/add_type/add_type",
     "pages/logs/logs"
   ],
   "window":{

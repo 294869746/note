@@ -12,6 +12,14 @@ page {
   left: 20rpx;
   background-color: #fff;
 }
+
+.log {
+  font-size: 30rpx;
+  position:relative;
+  left: 40rpx;
+  background-color: #fff;
+}
+
 .buttoncontent {
   display: flex;
   flex-direction: row;
