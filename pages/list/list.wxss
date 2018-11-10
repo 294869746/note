@@ -45,7 +45,7 @@ page {
   column-gap: 10px;
 }
 .date {
-  width: 30%;
+  width: 39%;
   height: 50rpx;
   background: #fff;
   position:relative;
@@ -54,7 +54,7 @@ page {
 }
 .value {
   position:relative;
-  width: 64%;
+  width: 55%;
   left: 4%;
   height: 50rpx;
   background: #fff;

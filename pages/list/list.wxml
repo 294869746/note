@@ -3,17 +3,18 @@
   <view class="buttoncontent">
     <button class="addnote" bindtap="add_note">添加新笔记</button>
     <button class="addgroup" bindtap="add_type">分组管理</button>
-    <button class="log" bindtap='log'>查看日志</button>
+    <!-- <button class="log" bindtap='log'>查看日志</button> -->
+    <button class="log" bindtap='clear_data'>清除所有数据</button>
   </view>
   <view class="content">
     <view class="note" wx:for="{{list_group}}" wx:key="*this" wx:for-item="gdate">
       <view class='group'>{{gdate}}</view>
       <view class="divLine1" />
-      <block wx:for="{{list_data}}" wx:for-item="ldate" wx:key="{{gdate.name}}">
-        <block wx:if="{{gdate.name == ldate.group}}">
+      <block wx:for="{{list_note}}" wx:for-item="ldate" wx:key="{{gdate}}">
+        <block wx:if="{{gdate == ldate.group}}">
           <view class="notedetail">
             <view class="date">{{ldate.date}}</view>
-            <view class="value">{{ldate.message}}</view>
+            <view class="value">{{ldate.title}}</view>
           </view>
         </block>
       </block>

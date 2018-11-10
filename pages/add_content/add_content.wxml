@@ -3,8 +3,8 @@
     <input name="title" placeholder="请输入标题" bindinput ='note_title'/>
   </view>
   <view class='type'>
-  <text name="类型" class="text_type">类  型:</text>
-    <input name="type" class="content_type" placeholder="请选择类型" bindinput ='note_type'/>
+  <text name="group_title" class="text_type">分 组:</text>
+    <input name="type" class="content_type" placeholder="请选择类型" bindinput ='note_group' value='{{note_group}}'/>
   </view>
   <view class='content'>
     <textarea  placeholder='请输入内容' class='content_textarea' bindinput ='note_content'></textarea>
