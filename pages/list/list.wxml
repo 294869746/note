@@ -7,37 +7,17 @@
   </view>
   <view class="divLine"></view>
   <view class="content">
-    <view class="note">
-      <view class='group'>JAVA</view>
+    <view class="note" wx:for="{{list_group}}" wx:key="*this" wx:for-item="gdate">
+      <view class='group'>{{gdate.name}}</view>
       <view class="divLine1" />
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
-    </view>
-<view class="note">
-      <view class='group'>Python</view>
-      <view class="divLine1" />
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
-      <view class="notedetail">
-        <view class="date">2018/01/01</view>
-        <view class="value">java入门</view>
-      </view>
+      <block wx:for="{{list_data}}" wx:for-item="ldate" wx:key="{{gdate.name}}">
+        <block wx:if="{{gdate.name == ldate.group}}">
+          <view class="notedetail">
+            <view class="date">{{ldate.date}}</view>
+            <view class="value">{{ldate.message}}</view>
+          </view>
+        </block>
+      </block>
     </view>
   </view>
 </view>

@@ -30,17 +30,6 @@ Page({
     wx.navigateBack({
       delta: 1
     })
-    wx.request({
-      url: '',
-      data: {
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      complete: res=>{
-        console.log(res.data)
-      }
-    })
   }
 })
 

@@ -4,5 +4,10 @@ const app = getApp()
 
 Page({
   onLoad: function () {
-  }
+  },
+  add_cancle: function () {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
 })
