@@ -2,13 +2,12 @@
 <view class="container">
   <view class="buttoncontent">
     <button class="addnote" bindtap="add_note">添加新笔记</button>
-    <button class="addgroup" bindtap="add_type">添加新组</button>
+    <button class="addgroup" bindtap="add_type">分组管理</button>
     <button class="log" bindtap='log'>查看日志</button>
   </view>
-  <view class="divLine"></view>
   <view class="content">
     <view class="note" wx:for="{{list_group}}" wx:key="*this" wx:for-item="gdate">
-      <view class='group'>{{gdate.name}}</view>
+      <view class='group'>{{gdate}}</view>
       <view class="divLine1" />
       <block wx:for="{{list_data}}" wx:for-item="ldate" wx:key="{{gdate.name}}">
         <block wx:if="{{gdate.name == ldate.group}}">

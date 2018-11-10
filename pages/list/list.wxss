@@ -40,7 +40,7 @@ page {
   height: 1000rpx;
   width: 100%;
   position: absolute;
-  top: 120rpx;
+  top: 80rpx;
   flex-direction: column;
   column-gap: 10px;
 }

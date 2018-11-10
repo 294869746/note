@@ -1,15 +1,19 @@
 <view class='container'>
   <view class='content_title'>
-    <input name="title" placeholder="请输入标题" />
+    <input name="group" placeholder="请输入类型" bindinput='add_group' value='{{input_value}}'/>
   </view>
-  <view class='content_type'>
-    <input name="type" placeholder="请输入类型" />
-  </view>
-  <view class='content'>
-    <textarea  placeholder='请输入内容' class='content_textarea'></textarea>
+    <view class="group_content">
+    <view class="note" wx:for="{{addgroup_list}}" wx:key="*this" wx:for-item="gdate">
+      <view class='group'>{{gdate}}</view>
+      <view class="divLine1" />
+    </view>
   </view>
   <view class="operate">
-  <view class='save_btn'><button>保存</button></view>
-  <view class='cancle_btn' bindtap='add_cancle'><button>取消</button></view>
+    <view class='save_btn' bindtap='add_save'>
+      <button>添加</button>
+    </view>
+    <view class='cancle_btn' bindtap='add_cancle'>
+      <button>返回上一页</button>
+    </view>
   </view>
-  </view>
+</view>
