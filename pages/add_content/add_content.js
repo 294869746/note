@@ -29,6 +29,7 @@ Page({
     var stkeys = wx.getStorageInfoSync().keys.toString()
     var group = new Array()
     var group_index =0
+    var flag = true
     stkeys = stkeys.split(',')
     for (var key=0; key < stkeys.length; key++) {
       var content = wx.getStorageSync(stkeys[key]).toString()
@@ -37,13 +38,22 @@ Page({
         group.push(content[1])
       }
     }
+    console.log("组"+group.length)
     for(var i=0;i<group.length;i++){
       var input_group = this.data.note_group.toString()
       var exist_group = group[i]
-      var flag = true
+      console.log(exist_group)
       if(input_group == exist_group)
       {
         flag = false
+        wx.navigateBack({
+          delta: 1
+        })
+        var note_id = new Date().getTime()
+        var note_data = [this.data.note_title, this.data.note_group, this.data.note_content, note_id]
+        note_data = note_data.toString()
+        note_id = note_id.toString()
+        wx.setStorageSync(note_id, note_data)
         break
       }
     }
@@ -57,17 +67,6 @@ Page({
           note_group: ''
         })
       }
-      else{
-        wx.navigateBack({
-          delta: 1
-        })
-        var note_id = new Date().getTime()
-        var note_data = [this.data.note_title, this.data.note_group, this.data.note_content, note_id]
-        note_data = note_data.toString()
-        note_id = note_id.toString()
-        wx.setStorageSync(note_id, note_data)
-      }
-
   }
 })
 

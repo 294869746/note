@@ -3,7 +3,8 @@
     "pages/list/list",
     "pages/add_content/add_content",
     "pages/add_type/add_type",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

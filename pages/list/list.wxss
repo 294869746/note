@@ -13,11 +13,12 @@ page {
   background-color: #fff;
 }
 
-.log {
+.clear_btn {
   font-size: 30rpx;
   position:relative;
   left: 40rpx;
   background-color: #fff;
+  color: red;
 }
 
 .buttoncontent {
@@ -44,18 +45,10 @@ page {
   flex-direction: column;
   column-gap: 10px;
 }
-.date {
-  width: 39%;
-  height: 50rpx;
-  background: #fff;
-  position:relative;
-  left: 2%;
-  box-shadow: 1px 1px 1px 1px black;
-}
 .value {
   position:relative;
-  width: 55%;
-  left: 4%;
+  width: 98%;
+  left: 1%;
   height: 50rpx;
   background: #fff;
   box-shadow: 1px 1px 1px 1px black;

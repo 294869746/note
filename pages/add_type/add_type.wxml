@@ -1,10 +1,10 @@
 <view class='container'>
   <view class='content_title'>
-    <input name="group" placeholder="请输入类型" bindinput='add_group' value='{{input_value}}'/>
+    <input name="group" placeholder="请输入新的分组" bindinput='add_group' value='{{input_value}}'/>
   </view>
     <view class="group_content">
     <view class="note" wx:for="{{addgroup_list}}" wx:key="*this" wx:for-item="gdate">
-      <view class='group'>{{gdate}}</view>
+      <view class='group'>{{gdate.name}}<button class='del_btn' bindtap='del_group' data-name='{{gdate.name}}' data-id='{{gdate.id}}'>删除</button></view>
       <view class="divLine1" />
     </view>
   </view>

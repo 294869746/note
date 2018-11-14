@@ -9,7 +9,7 @@ page {
 }
 
 .content_title {
-  background: #fff;
+  background: #FFF;
   height: 5%;
   width: 98%;
   position: absolute;
@@ -17,22 +17,47 @@ page {
   column-gap: 10px;
 }
 
-.content_type {
-  background: #fff;
+.text_type{
+  height: 5%;
+  width: 40%;
+  position: absolute;
+  top: 7%;
+  white-space: pre;
+  color: white;
+}
+.type {
   height: 5%;
   width: 98%;
   position: absolute;
   top: 7%;
   column-gap: 10px;
+  background: #aaa;
+}
+
+.content_type {
+  background: #aaa;
+  height: 5%;
+  width: 84%;
+  position: absolute;
+  top: 7%;
+  column-gap: 10px;
+  left: 16%;
 }
 
 .content {
-  background: #fff;
-  height: 77%;
+  background: #FFF;
+  height: 76%;
   width: 98%;
   position: absolute;
   top: 13%;
   column-gap: 10px;
+}
+
+.content_textarea {
+  background: #FFF;
+  height: 100%;
+  width: 92%;
+  position: absolute;
 }
 
 .operate {
@@ -40,52 +65,19 @@ page {
   width: 98%;
   display: flex;
   flex-direction: row;
-  top: 91%;
+  top: 90%;
 }
-
 .save_btn {
   width: 50%;
   height: 5%;
-  top: 91%;
 }
 
 .cancle_btn {
   width: 50%;
   height: 5%;
-  top: 91%;
 }
-
-.group {
-  position: relative;
-}
-
 .del_btn {
-  position: absolute;
-  height: 100%;
-  width: 15%;
-  right: 1%;
-  font-size: 10px;
-  top: 0px;
+  width: 50%;
+  height: 5%;
   color: red;
-}
-
-.divLine1 {
-  background: #e0e3da;
-  width: 100%;
-  height: 5rpx;
-  position: relative;
-}
-
-.note {
-  width: 100%;
-}
-
-.group_content {
-  display: flex;
-  height: 1000rpx;
-  width: 100%;
-  position: absolute;
-  top: 80rpx;
-  flex-direction: column;
-  column-gap: 10px;
 }

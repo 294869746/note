@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='content_title'>
+    <input name="title" bindinput='note_title' value='{{note_title}}' />
+  </view>
+  <view class='type'>
+    <text name="group_title" class="text_type">分 组:</text>
+    <input name="type" class="content_type" value='{{note_group}}' disabled="disabled" />
+  </view>
+  <view class='content'>
+    <textarea class='content_textarea' bindinput='note_content' value='{{note_content}}'></textarea>
+  </view>
+  <view class="operate">
+    <view class='save_btn'>
+      <button bindtap='note_save'>修改</button>
+    </view>
+    <view class='cancle_btn'>
+      <button bindtap='note_cancle'>取消</button>
+    </view>
+    <view class='del_btn'>
+      <button style='color: red;' bindtap='del_note'>删除</button>
+    </view>
+  </view>
+</view>

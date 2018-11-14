@@ -21,11 +21,18 @@ Array.prototype.distinct = function() {
 }
 
 Page({
-  data: {},
+  data: {
+  },
   onLoad: function() {
     // wx.clearStorageSync()
   },
   onShow() {
+    //初始化数据
+    this.setData({
+      list_group: '',
+      list_note: ''
+    })
+
     var group_index = 0
     var note_index = 0
     var key = 0
@@ -100,6 +107,14 @@ Page({
           that.onLoad()
         }
       }
+    })
+  },
+  note_detail: function(e){
+    var viewDataSet = e.target.dataset;
+    var id = viewDataSet.id
+    var title = viewDataSet.title
+    wx.navigateTo({
+      url: '../detail/detail?key='+id,
     })
   },
   log: function() {

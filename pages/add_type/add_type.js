@@ -3,29 +3,35 @@
 const app = getApp()
 const util = require('../../utils/util.js')
 
+Array.prototype.remove = function (val) {
+  var index = this.indexOf(val);
+  if (index > -1) {
+    this.splice(index, 1);
+  }
+};
+
 Page({
   data:{
     addgroup_list: [''],
     input_value: ''
   },
   onLoad: function () {
+  },
+  onShow: function (){
     var list_keys = wx.getStorageInfoSync().keys.toString()
     list_keys = list_keys.split(',')
-    var glist = 0 
-    for(var i=0;i<list_keys.length;i++)
-    {
-      if(wx.getStorageSync(list_keys[i]).length==2)
-      {
-        var index = "addgroup_list[" + glist + "]"
+    var glist = 0
+    for (var i = 0; i < list_keys.length; i++) {
+      if (wx.getStorageSync(list_keys[i]).length == 2) {
+        var name = "addgroup_list[" + glist + "].name"
+        var id = "addgroup_list[" + glist + "].id"
         this.setData({
-          [index]: wx.getStorageSync(list_keys[i])[1]
+          [name]: wx.getStorageSync(list_keys[i])[1],
+          [id]: wx.getStorageSync(list_keys[i])[0]
         })
         glist += 1
       }
     }
-  },
-  onShow: function (){
-
   },
   add_group: function (e) {
     this.setData({
@@ -37,7 +43,8 @@ Page({
   add_save: function (e) {
     var group_list = new Array()
     var size = this.data.addgroup_list.length
-    var list_data_num = "addgroup_list["+size+"]"
+    var list_data_name = "addgroup_list["+size+"].name"
+    var list_data_id = "addgroup_list[" + size + "].id"
     //加个重名校验
     var old_list = this.data.addgroup_list
     for (var i = 0; i < old_list.length; i++) {
@@ -55,15 +62,35 @@ Page({
     group_list.push(this.data.input_value)
     if (this.data.input_value != undefined && this.data.input_value != '')
     {
-      console.log(group_list[0])
-      this.setData({
-        [list_data_num]: group_list[0]
-      })
       var group_id = util.formatTime(new Date())
       wx.setStorageSync(group_id, [group_id, group_list[0]])
+      this.setData({
+        [list_data_name]: group_list[0],
+        [list_data_id]: group_id
+      })
     }
     this.setData({
       input_value: ''
+    })
+
+  },
+  del_group: function(e){
+    var viewDataSet = e.target.dataset;
+    var name = viewDataSet.name
+    var id = viewDataSet.id
+    var that = this
+    wx.showModal({
+      content: '是否删除'+name+"?",
+      success(res){
+        if(res.confirm)
+        {
+          wx.removeStorageSync(id)
+          that.setData({
+            addgroup_list: ''
+          })
+          that.onShow()
+        }
+      }
     })
 
   },
