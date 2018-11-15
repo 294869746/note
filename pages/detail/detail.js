@@ -60,12 +60,13 @@ Page({
     })
   },
   note_save: function() {
+    var that = this 
     wx.showModal({
       content: '确认修改笔记？',
       success(res) {
         if (res.confirm) {
-          var note_id = this.data.note_id
-          var note_data = [this.data.note_title, this.data.note_group, this.data.note_content, note_id]
+          var note_id = that.data.note_id
+          var note_data = [that.data.note_title, that.data.note_group, that.data.note_content, note_id]
           note_data = note_data.toString()
           wx.setStorageSync(note_id, note_data)
           wx.navigateBack({
