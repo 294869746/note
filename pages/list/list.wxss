@@ -53,6 +53,7 @@ page {
   background: #fff;
   box-shadow: 1px 1px 1px 1px black;
   font-size: 14px;
+  line-height: 20px;
 }
 .group{
   position:relative;
