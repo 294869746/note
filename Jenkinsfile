@@ -27,7 +27,6 @@ pipeline {
                     }
                     catch (exc) {
                         echo 'Testing failed!'
-                        currentBuild.result = 'UNSTABLE'
                     }
                 }
             }
