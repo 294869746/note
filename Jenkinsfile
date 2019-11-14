@@ -21,8 +21,12 @@ pipeline {
             steps {
                 sh 'echo Building... Failure here will fail the build'
                 script {
+                    try{
                         sh 'exit 1'
+                    }
+                    catch(exc){
                         sh 'exit 0'
+                    }
                 }
             }
         }
