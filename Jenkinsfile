@@ -26,6 +26,7 @@ pipeline {
                     }
                     catch(exc){
                         sh 'exit 0'
+                        junit allowEmptyResults: true, testResults: 'report/APIReport.xml'
                     }
                 }
             }
