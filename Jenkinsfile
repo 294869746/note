@@ -11,21 +11,25 @@ pipeline {
             steps {
                 echo 'Testing..'
             }
-            steps {
-                script {
-                allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'target/allure-results']]
-                        ])
-                        }
-            }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        stage('Unstable') {
+            steps {
+                sh 'echo Building... Failure here will fail the build'
+                script {
+                    try {
+                        echo 'Running tests...'
+                        sh 'exit 1'
+                    }
+                    catch (exc) {
+                        echo 'Testing failed!'
+                        currentBuild.result = 'UNSTABLE'
+                    }
+                }
             }
         }
     }
